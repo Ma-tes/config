@@ -1,0 +1,238 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+    // window navigation with ctrl + h, j, k, l
+    "command": "workbench.action.navigateLeft",
+    "key": "ctrl+h",
+    "when": "vim.mode != 'Insert'"
+  },
+  {
+    // window navigation with ctrl + h, j, k, l
+    "command": "workbench.action.navigateDown",
+    "key": "ctrl+j",
+    "when": "vim.mode != 'Insert'"
+  },
+  {
+    // Open new Line in Insert Mode
+    "command": "editor.action.insertLineAfter",
+    "key": "ctrl+j",
+    "when": "vim.mode == 'Insert' && editorTextFocus"
+  },
+  {
+    // window navigation with ctrl + h, j, k, l
+    "command": "workbench.action.navigateUp",
+    "key": "ctrl+k",
+    "when": "vim.mode != 'Insert'"
+  },
+  {
+    // window navigation with ctrl + h, j, k, l
+    "command": "workbench.action.navigateRight",
+    "key": "ctrl+l",
+    "when": "vim.mode != 'Insert'"
+  },
+  // @ Search Section Navigation
+  {
+    // Move focus back to the search section (opposite of Ctrl+J)
+    "command": "workbench.action.findInFiles",
+    "key": "ctrl+k",
+    "when": "searchViewletVisible && searchResultListFocused"
+  },
+  {
+    // Jump to the search results when the focus is on the search, files to include, file to exclude
+    "command": "search.action.focusSearchList",
+    "key": "ctrl+j" ,
+    "when": "searchViewletVisible && (searchInputBoxFocus || searchViewletFocus)"
+  },
+  // @ window Navigatio in Copliot
+  {
+    "command": "workbench.panel.chat.view.copilot.focus",
+    "key": "ctrl+j",
+    "when": "workbench.panel.chat.view.copilot.active && sideBarFocus && !filesExplorerFocus && !searchViewletFocus"
+  },
+  // @ Tab Movement Custom
+  {
+    // Move to Next Tab, when focus is on editor, not on sidebar
+    "command": "workbench.action.nextEditorInGroup",
+    "key": "tab",
+    "when": "(vim.mode == 'Normal') && editorTextFocus"
+  },
+  {
+    "command": "workbench.action.previousEditorInGroup",
+    "key": "shift+tab",
+    "when": "(vim.mode == 'Normal') && editorTextFocus"
+  },
+  {
+    // Move current active tab to right Group (Custom)
+    "command": "workbench.action.moveEditorToRightGroup",
+    "key": "ctrl+w l",
+    "when": "vim.mode == 'Normal'&& (editorTextFocus || !inputFocus)" // Only in Normal Mode
+  },
+  {
+    // Move current active tab to Left Group (Custom)
+    "command": "workbench.action.moveEditorToLeftGroup",
+    "key": "ctrl+w h",
+    "when": "vim.mode == 'Normal'&& (editorTextFocus || !inputFocus)" // Only in Normal Mode
+  },
+  {
+    // Move current active tab to Below Group (Custom)
+    "command": "workbench.action.moveEditorToBelowGroup",
+    "key": "ctrl+w j",
+    "when": "vim.mode == 'Normal'&& (editorTextFocus || !inputFocus)" // Only in Normal Mode
+  },
+  {
+    // Move current active tab to Above Group (Custom)
+    "command": "workbench.action.moveEditorToAboveGroup",
+    "key": "ctrl+w k",
+    "when": "vim.mode == 'Normal'&& (editorTextFocus || !inputFocus)" // Only in Normal Mode
+  },
+  {
+    // Close the current working tab
+    "command": "workbench.action.closeActiveEditor",
+    "key": "ctrl+w q",
+    "when": "vim.mode == 'Normal'&& (editorTextFocus || !inputFocus)" // Only in Normal Mode
+  },
+  {
+    // Vertical Split view with current working tab
+    // "command": "workbench.action.splitEditorRight",
+    "command": "runCommands",
+    "key": "ctrl+w v",
+    "when": "vim.mode == 'Normal'&& (editorTextFocus || !inputFocus)", // Only in Normal Mode
+    "args": {
+      "commands": ["workbench.action.splitEditorRight", "explorer.openAndPassFocus", "workbench.action.closeEditorsInOtherGroups"]
+    }
+  },
+  {
+    // Horizontal Split view with current working tab
+    "command": "workbench.action.splitEditorDown",
+    "key": "ctrl+w s",
+    "when": "vim.mode == 'Normal'&& (editorTextFocus || !inputFocus)" // Only in Normal Mode
+  },
+  {
+    // Close other tabs
+    "command": "workbench.action.closeOtherEditors",
+    "key": "ctrl+w o",
+    "when": "vim.mode == 'Normal'&& (editorTextFocus || !inputFocus)" // Only in Normal Mode
+  },
+  {
+    // Swap current with next vertical tab
+    "command": "workbench.action.moveActiveEditorGroupRight",
+    "key": "ctrl+w x",
+    "when": "vim.mode == 'Normal'&& (editorTextFocus || !inputFocus)" // Only in Normal Mode
+  },
+  // @ Moving Line Up and Down
+  {
+    "command": "editor.action.moveLinesDownAction",
+    "key": "shift+j",
+    "when": "vim.mode !== 'Insert' && editorTextFocus"
+  },
+  {
+    "command": "editor.action.moveLinesUpAction",
+    "key": "shift+k",
+    "when": "vim.mode !== 'Insert' && editorTextFocus"
+  },
+  // @ Showing define of function, showHover
+  {
+    // Show Hover
+    "command": "editor.action.showHover",
+    "key": "shift+h",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  // @ codeAction: this function is used to show the possible actions that can be taken on the code
+  {
+    "command": "editor.action.codeAction",
+    "key": "space c a",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    // Rename the Variable
+    "command": "editor.action.rename",
+    "key": "space c r",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    // gotoSymbol: this function is used to go to the symbol in the code
+    "command": "workbench.action.gotoSymbol",
+    "key": "space c s",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  // @ Go to Definition
+  {
+    "command": "editor.action.revealDefinition",
+    "key": "space g d",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "editor.action.goToReferences",
+    "key": "space g r",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    // Open SideBar like Tree View in Normal Mode
+    "command": "workbench.action.toggleSidebarVisibility",
+    "key": "space t",
+    "when": "vim.mode == 'Normal'&& (editorTextFocus || !inputFocus)"
+  },
+  {
+    // Rename File on file explorer
+    "command": "renameFile",
+    "key": "r",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus" // Only in File Explorer
+  },
+  {
+    // Copy file on file explorer
+    "command": "filesExplorer.copy",
+    "key": "c",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus" // Only in File Explorer
+  },
+  {
+    // Paste file on file explorer
+    "command": "filesExplorer.paste",
+    "key": "p",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus" // Only in File Explorer
+  },
+  {
+    // Cut file on file explorer
+    "command": "filesExplorer.cut",
+    "key": "x",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus" // Only in File Explorer
+  },
+  {
+    // Delete file on file explorer
+    "command": "deleteFile",
+    "key": "d",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus" // Only in File Explorer
+  },
+  {
+    // New File on file explorer
+    "command": "explorer.newFile",
+    "key": "a",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus" // Only in File Explorer
+  },
+  {
+    // New Folder on file explorer
+    "command": "explorer.newFolder",
+    "key": "shift+a",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus" // Only in File Explorer
+  },
+  {
+    // Open file from file explorer, This is backup Use `o` by vim.
+    "command": "explorer.openFilePreserveFocus",
+    "key": "enter",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus" // Only in File Explorer
+  },
+  {
+    // Open file on vertical split
+    "command": "explorer.openToSide",
+    "key": "s",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus" // Only in File Explorer
+  },
+  {
+    // Open file on horizontal split
+    "args": {
+      "commands": ["workbench.action.splitEditorDown", "explorer.openAndPassFocus", "workbench.action.closeOtherEditors"]
+    },
+    "command": "runCommands",
+    "key": "shift+s",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus" // Only in File Explorer
+  }
+]
