@@ -1,0 +1,100 @@
+:l exercise.hs
+fst3 [1,2,3]
+:l exercise.hs
+:r
+convert [("jogurt", 4, 15.5)]
+convert [("jogurt", 4, 15.5), ("mleko", 1, 20), ("maslo", 1, 50)]
+change [1,2,3,4,5] [(0,4), (2,3)]
+:x
+:e
+exit
+:c
+change [1,2,3,4,5] [(0,4), (2,3)]
+:r
+change [4,3,2,1,5] [(2,3)]
+change [1,2,3,4,5] [(0,4), (2,3)]
+change [1,2,3,4,5] [(0,4)]
+change [1,2,3,4,5] [(0,4), (2,3)]
+change [4,3,2,1,5] [(2,3)]
+:r
+change [4,3,2,1,5] [(2,3)]
+:r
+change [4,3,2,1,5] [(2,3)]
+change [4,3,2,1,5] [(2,3)]
+change [1,2,3,4,5] [(0,4), (2,3)]
+:r
+change [1,2,3,4,5] [(0,4), (2,3)]
+:r
+change [1,2,3,4,5] [(0,4), (2,3)]
+change [1,2,3,4,5] [(0,4), (2,3)]
+:r
+change [1,2,3,4,5] [(0,4), (2,3)]
+change [1,2,3,4,5] [(0,4)]
+:r
+change [1,2,3,4,5] [(0,4)]
+:r
+change [1,2,3,4,5] [(0,4)]
+:r
+change [1,2,3,4,5] [(0,4)]
+:r
+change [1,2,3,4,5] [(0,4)]
+:r
+change [1,2,3,4,5] [(0,4)]
+:r
+change [1,2,3,4,5] [(0,4)]
+:r
+change [1,2,3,4,5] [(0,4)]
+change [1,2,3,4,5] [(1,2)]
+:r
+change [1,2,3,4,5] [(1,2)]
+change [1,2,3,4,5] [(1,2)]
+:r
+change [1,2,3,4,5] [(1,2)]
+:r
+change [1,2,3,4,5] [(1,2)]
+change [1,2,3,4,5] [(1,2)]
+:r
+change [1,2,3,4,5] [(1,2)]
+change [1,2,3,4,5] [(0,4)]
+:r
+:r
+change [1,2,3,4,5] [(0,4)]
+change [1,2,3,4,5] [(0,4)]
+:r
+change [1,2,3,4,5] [(0,4)]
+:r
+:r
+change [1,2,3,4,5] [(0,4)]
+:r
+:r
+:r
+convert [("jogurt", 4, 15.5), ("mleko", 1, 20)]
+:r
+:r
+:r
+convert [("jogurt", 4, 15.5), ("mleko", 1, 20)]
+convert [("jogurt", 4, 15.5), ("mleko" 1, 20)]
+:r
+convert [("jogurt", 4, 15.5), ("mleko" 1, 20)]
+convert [("jogurt", 4, 15.5), ("mleko"m 1, 20)]
+convert (1,2,3)
+thd3 (1,2,3)
+:r
+:r
+thd3 (1,2,3)
+snd3 (1,2,3)
+fst3 (1,2,3)
+:r
+thd3 (1,2,3)
+thd3 (1,2,3)
+thd3 (1,2,3)
+:r
+:r
+thd (1, 2, 3)
+:r
+:r
+:r
+:r
+:r
+replaceByRepeat "programovani" 'r' 2
+clear

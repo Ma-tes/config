@@ -1,0 +1,53 @@
+# !/USR/BIN/ENV SH
+
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
+yabai -m config                                     \
+	external_bar                 off:40:0       \
+	menubar_opacity              1.0            \
+	mouse_follows_focus          on 	    \
+	focus_follows_mouse          on      \
+	display_arrangement_order    default        \
+	window_origin_display        default        \
+	window_placement             second_child   \
+	window_zoom_persist          on             \
+	window_shadow                off            \
+	window_opacity               off            \
+	window_opacity_duration      0.0            \
+	active_window_opacity        1.0            \
+	normal_window_opacity        0.90           \
+	window_animation_duration    0.0            \
+	window_animation_easing      ease_out_circ  \
+	insert_feedback_color        0xffd75f5f     \
+	split_ratio                  0.50           \
+	split_type                   vertical       \
+	mouse_modifier               alt            \
+	mouse_action1                move           \
+	mouse_action2                resize         \
+	mouse_drop_action            swap           \
+	layout                       bsp            \
+	top_padding                  10              \
+	bottom_padding               10              \
+	left_padding                 10              \
+	right_padding                10              \
+	window_gap                   10              \
+	auto_balance                 off            
+
+yabai -m config active_window_border_color   0xff775759
+yabai -m config normal_window_border_color   0xff555555
+
+yabai -m config window_border_radius 12
+
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Karabiner-Elements$" manage=off
+yabai -m rule --add app="^Discord$" manage=off
+
+yabai -m signal --add event=window_focused action="sketchybar --trigger window_focus"
+yabai -m signal --add event=window_created action="sketchybar --trigger windows_on_spaces"
+yabai -m signal --add event=window_destroyed action="sketchybar --trigger windows_on_spaces"
+
+# spacebar padding on top screen
+yabai -m config external_bar all:16:0
+
+

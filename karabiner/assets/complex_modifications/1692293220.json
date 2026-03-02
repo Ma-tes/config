@@ -1,0 +1,26 @@
+{
+  "title": "Exchange left_paren and semicolon",
+  "rules": [
+    {
+      "description": "Exchange left_paren and semicolon",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from":{
+              "key_code": "non_us_backslash"
+            }
+        }
+          ]
+          "to":[ 
+          {
+            "key_code": "semicolon",
+            "modifiers": [ 
+                "left_shift"
+          {
+           ] 
+	]
+        }
+      ]
+    }
+  ]
+}

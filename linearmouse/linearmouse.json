@@ -1,0 +1,26 @@
+{
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.9.5",
+  "schemes" : [
+    {
+      "pointer" : {
+        "acceleration" : 0.6875,
+        "speed" : 0.0689655172413792768,
+        "disableAcceleration" : true
+      },
+      "if" : {
+        "device" : {
+          "productName" : "Logi M650",
+          "serialNumber" : "EA042CDA",
+          "productID" : "0xb02a",
+          "category" : "mouse",
+          "vendorID" : "0x46d"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        }
+      }
+    }
+  ]
+}
