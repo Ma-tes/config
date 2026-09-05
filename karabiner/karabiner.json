@@ -775,9 +775,35 @@
                                 "type": "basic"
                             }
                         ]
+                    },
+                    {
+                        "description": "Remap Left Option to Ctrl+Shift+Opt for AeroSpace (Leaves Right Option alone)",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "command",
+                                            "control",
+                                            "option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_option",
+                                        "modifiers": [
+                                            "left_control"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     }
-                ]
-            },
+				]
+			},
             "devices": [
                 {
                     "disable_built_in_keyboard_if_exists": false,
